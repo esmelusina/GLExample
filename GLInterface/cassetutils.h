@@ -36,4 +36,4 @@ bool   freeShader(Shader &);
 Shader loadShader(const char *vpath, const char *fpath);
 
 RenderTarget makeRT(const Texture *textures, unsigned tcount);
-
+bool         freeRT(RenderTarget &rt);
