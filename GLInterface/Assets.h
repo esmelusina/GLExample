@@ -20,22 +20,22 @@ class Assets
 public:
 	static Assets &instance() { static Assets a; return a; }
 
-	Texture      getTexture		 (const std::string &name);
+	Texture      getTexture      (const std::string &name);
 	RenderObject getRenderObject (const std::string &name);
-	Shader       getShader		 (const std::string &name);
+	Shader       getShader       (const std::string &name);
 	RenderTarget getRenderTarget (const std::string &name);
 
 	// Just wrap cassetutils procedures, add a 'name' parameter
 	// so that we can name them memorable things, and drop them in our maps
-	void makeTexture	  (const char *name, unsigned w, unsigned h, unsigned depth, const unsigned char *pixels = nullptr);
+	void makeTexture      (const char *name, unsigned w, unsigned h, unsigned depth, const unsigned char *pixels = nullptr);
 	void makeRenderObject (const char *name, const Vertex *verts, unsigned vsize, const unsigned *tris, unsigned tsize);
-	void makeShader		  (const char *name, const char *vsource, const char *fsource);
+	void makeShader       (const char *name, const char *vsource, const char *fsource);
 	void makeRenderTarget (const char *name, unsigned w, unsigned h, const unsigned *depths, unsigned dcount );
 
-	void loadFBX	(const char *name, const char *path);
-	void loadOBJ	(const char *name, const char *path);
+	void loadFBX    (const char *name, const char *path);
+	void loadOBJ    (const char *name, const char *path);
 	void loadTexture(const char *name, const char *path);
-	void loadShader	(const char *name, const char *vpath, const char *fpath);
+	void loadShader (const char *name, const char *vpath, const char *fpath);
 
 
 	// set isInit to true IFF window is initialized

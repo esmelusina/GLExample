@@ -16,12 +16,12 @@ the data and procedures in whichever way makes sense.
 */
 
 struct RenderObject { unsigned VBO, VAO, IBO, tsize; };
-struct Texture		{ unsigned handle, width, height, format; };
-struct Shader		{ unsigned handle; }; // may have more data later.
+struct Texture	    { unsigned handle, width, height, format; };
+struct Shader	    { unsigned handle; }; // may have more data later.
 struct RenderTarget { unsigned FBO, width, height; Texture *e_targets; };
 
 RenderObject makeRO(const Vertex *verts, unsigned vsize, const unsigned *tris, unsigned tsize);
-bool		 freeRO(RenderObject &ro);  // should zero out the RO just in case it
+bool         freeRO(RenderObject &ro);  // should zero out the RO just in case it
 RenderObject loadFBX(const char *path); // may want to return array, since FBX can have more than one RO
 RenderObject loadOBJ(const char *path); // Need to manually interleave from tinyOBJ
 
