@@ -1,5 +1,6 @@
 #pragma once
 
+// just so this file makes sense, normally we'd use a math library...
 struct vec4 { float x, y, z, w; };
 struct vec2 { float x, y; };
 
@@ -23,8 +24,9 @@ const vec4 black	= { 0,0,0,1 };
 const vec4 white	= { 1,1,1,1 };
 
 
+
 struct Vertex
-{
+{   // add attributes as necessary...
 	vec4 position;
 	vec4 normal;	// forward
 	vec4 tangent;	// right
@@ -33,7 +35,7 @@ struct Vertex
 	vec2 texCoord;  // uv coordinates for textures
 };
 
-// clip Space Quad
+// clip Space Quad- think this is about right... from memory
 const Vertex QuadVerts[] =
 {
 	{ { -1, 1, 0, 1 }, forward, right, up, white, { 0,1 } },
