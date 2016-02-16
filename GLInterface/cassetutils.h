@@ -18,6 +18,7 @@ the data and procedures in whichever way makes sense.
 struct RenderObject { unsigned VBO, VAO, IBO, tsize; };
 struct Texture		{ unsigned handle, width, height, format; };
 struct Shader		{ unsigned handle; }; // may have more data later.
+struct RenderTarget { unsigned handle, width, height; Texture *e_targets; };
 
 RenderObject makeRO(const Vertex *verts, unsigned vsize, const unsigned *tris, unsigned tsize);
 bool		 freeRO(RenderObject &ro);  // should zero out the RO just in case it
@@ -33,4 +34,6 @@ Texture loadTexture(const char *path);
 Shader makeShader(const char *vsource, const char *fsource);
 bool   freeShader(Shader &);
 Shader loadShader(const char *vpath, const char *fpath);
+
+RenderTarget makeRT(const Texture *textures, unsigned tcount);
 

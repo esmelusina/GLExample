@@ -48,6 +48,9 @@
     <ClInclude Include="Phong.h">
       <Filter>Header Files\Object</Filter>
     </ClInclude>
+    <ClInclude Include="GLInterface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="example.cpp">
